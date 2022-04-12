@@ -284,7 +284,9 @@ export default {
         this.form.location &&
         this.form.image != ''
       ) {
-        return true
+        if (this.checkImageName()) {
+          return true
+        }
       } else {
         Swal.fire({
           position: 'center',
@@ -306,6 +308,19 @@ export default {
     },
     getData() {
       return editor.getData()
+    },
+    checkImageName() {
+      if (this.form.image2.length === this.form.image_name.length) {
+        return true
+      } else {
+        Swal.fire({
+          position: 'center',
+          icon: 'info',
+          text: 'Add Image title(s) to all secondary images added.',
+          showConfirmButton: false,
+          timer: 3000
+        })
+      }
     }
   },
   mounted() {
