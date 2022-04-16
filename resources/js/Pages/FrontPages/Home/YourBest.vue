@@ -33,11 +33,10 @@
 
 <script>
 import CompletedImage from '../../Shared/SVGImages/CompletedImage.vue'
-import YourBestImage from '../../Shared/SVGImages/YourBestImage.vue'
 // import SlidingHouses from './SlidingHouses.vue'
 import { Link } from '@inertiajs/inertia-vue3'
 export default {
-  components: { YourBestImage, CompletedImage, Link },
+  components: { CompletedImage, Link },
   data() {
     return {
       show_image: null,
